@@ -1,0 +1,25 @@
+import { Language } from '../types/index.js';
+
+export const SUPPORTED_LANGUAGES: Language[] = [
+  { code: 'auto', name: 'Auto Detect' },
+  { code: 'en', name: 'English', nativeName: 'English' },
+  { code: 'es', name: 'Spanish', nativeName: 'Español' },
+  { code: 'fr', name: 'French', nativeName: 'Français' },
+  { code: 'de', name: 'German', nativeName: 'Deutsch' },
+  { code: 'it', name: 'Italian', nativeName: 'Italiano' },
+  { code: 'pt', name: 'Portuguese', nativeName: 'Português' },
+  { code: 'ru', name: 'Russian', nativeName: 'Русский' },
+  { code: 'ja', name: 'Japanese', nativeName: '日本語' },
+  { code: 'zh', name: 'Chinese (Simplified)', nativeName: '简体中文' },
+  { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी' },
+  { code: 'ar', name: 'Arabic', nativeName: 'العربية' },
+  { code: 'bn', name: 'Bengali', nativeName: 'বাংলা' },
+  { code: 'nl', name: 'Dutch', nativeName: 'Nederlands' },
+  { code: 'el', name: 'Greek', nativeName: 'Ελληνικά' },
+  { code: 'ko', name: 'Korean', nativeName: '한국어' },
+  { code: 'pl', name: 'Polish', nativeName: 'Polski' },
+  { code: 'sv', name: 'Swedish', nativeName: 'Svenska' },
+  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe' },
+  { code: 'uk', name: 'Ukrainian', nativeName: 'Українська' },
+  { code: 'vi', name: 'Vietnamese', nativeName: 'Tiếng Việt' },
+];
