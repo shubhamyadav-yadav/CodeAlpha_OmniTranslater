@@ -428,7 +428,29 @@ Runs Vitest and React Testing Library against `client/src/__tests__/`:
 
 ---
 
-## Deployment Guidelines
+### Vercel Serverless Deployment (Recommended)
+
+This repository includes native Vercel Serverless support via `vercel.json` and `api/index.ts`.
+
+#### Option A: 1-Click Git Import (Easiest)
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Select and import your GitHub repository: **`CodeAlpha_OmniTranslater`**.
+3. Vercel automatically detects `vercel.json`:
+   - **Framework Preset:** Other / Vite
+   - **Build Command:** `npm run vercel-build` (automatically configured)
+   - **Output Directory:** `client/dist` (automatically configured)
+4. (Optional) Add environment variables in **Environment Variables**:
+   - `TRANSLATION_PROVIDER=google`
+   - `GOOGLE_TRANSLATE_API_KEY=YOUR_KEY` (if using Google Cloud API key)
+5. Click **Deploy**. Your app will be live on a `*.vercel.app` domain in ~1 minute!
+
+#### Option B: Deploy via Vercel CLI
+```bash
+npx vercel
+```
+Follow the interactive prompts to link and deploy your project.
+
+---
 
 ### Container Deployment (Docker)
 

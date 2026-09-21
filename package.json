@@ -3,20 +3,32 @@
   "version": "1.0.0",
   "description": "Production-ready full-stack Language Translation Tool with modular providers and secure server-side credentials.",
   "private": true,
+  "type": "module",
   "scripts": {
     "install:all": "npm --prefix server install && npm --prefix client install",
     "dev:server": "npm --prefix server run dev",
     "dev:client": "npm --prefix client run dev",
     "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
     "build:server": "npm --prefix server run build",
-    "build:client": "npm --prefix client run build",
+    "build:client": "npm --prefix client install && npm --prefix client run build",
     "build": "npm --prefix server run build && npm --prefix client run build",
+    "vercel-build": "npm --prefix server install && npm --prefix server run build && npm --prefix client install && npm --prefix client run build",
     "test:server": "npm --prefix server run test",
     "test:client": "npm --prefix client run test",
     "test": "npm --prefix server run test && npm --prefix client run test",
     "start": "npm --prefix server run start"
   },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "zod": "^3.24.2"
+  },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "@vercel/node": "^5.1.10",
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
   }
 }

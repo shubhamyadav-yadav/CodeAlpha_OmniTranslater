@@ -51,8 +51,9 @@ export function createApp(): Express {
   app.use(express.json({ limit: '100kb' }));
   app.use(express.urlencoded({ extended: true, limit: '100kb' }));
 
-  // API Routes mounted under /api
+  // API Routes mounted under /api and direct root for Vercel serverless compatibility
   app.use('/api', translateRouter);
+  app.use(translateRouter);
 
   // Serve static client assets if build directory exists
   const clientDist = path.resolve(__dirname, '../../client/dist');
